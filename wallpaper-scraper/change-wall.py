@@ -10,11 +10,13 @@ import pprint
 SUB='wallpapers'
 LIMIT=10
 
-reddit = praw.Reddit( client_id='7cTWvScixi3ZYw',
-        client_secret='XiDJMkb6I6hWDnIDoNVe2HlNHGo',
-        username='firminosleftpeg',
-        password='kuchbhirakhle',
-        user_agent='wallpaper getter script' )
+# reddit = praw.Reddit( client_id=os.environ.get("RDT_CLIENT_ID"),
+        # client_secret=os.environ.get("RDT_CLIENT_SECRET"),
+        # username=os.environ.get("RDT_USERNAME"),
+        # password=os.environ.get("RDT_PASSWORD"),
+        # user_agent=os.environ.get("RDT_USER_AGENT") )
+
+reddit = praw.Reddit( 'bot1' , user_agent="UA for wall scrapper")
 
 print( reddit.user.me() )
 
